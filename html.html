@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes HTML</title>
+</head>
+<body>  
+    <h1>HTML</h1>  
+    <h2>Ecrire des caractères spéciaux dans un texte HTML :</h2>
+    <h3>  
+      &amp;emsp; = tabulation<br>
+      &amp;nbsp;  = space<br>
+      &amp;lt;   =   <    (less than)<br>
+      &amp;gt;   =   >    (greater than)<br>
+      &amp;amp;  =   &    (ampersand)<br>
+      &amp;quot; =   "    (double quote)<br>
+    </h3>
+    
+    <h2>&lt;Starting tag&nbsp;&nbsp;Content   &nbsp;&nbsp;Ending tag&gt; (Ex: &lt;b&gt;Mon texte&lt;/b&gt;)</h2>
+    
+    <h2>&lt;Self closing tag&nbsp;&nbsp;&gt; (Ex: &lt;br&gt;)</h2>
+    
+    <h2>&lt;HTML element&nbsp;&nbsp;  Attributes&gt; (Ex: &lt;hr size="3" noshade&gt;)</h2> 
+    
+    <h3 style="color: red;">NB: Pour l'italique mieux vaut préférer la balise "em" à la balise "i". "em" donne le même effet mais aussi un poid particulier au texte</h3>
+    <h3 style="color: red;">De même pour le gras mieux vaut préférer la balise "strong" à la balise "b".</h3>
+    <hr>
+        
+    <h2>Structure du fichier HTML</h2>
+    <h3>Boilerplate</h3>
+    <h4>
+      &lt;!DOCTYPE html&gt;<br>
+      &lt;html lang="en"&gt;
+      &emsp;&lt;head&gt;<br>
+      &emsp;&emsp;&lt;meta charset="UTF-8"&gt;<br>
+      &emsp;&emsp;&lt;title&gt;My Website&lt;/title&gt;<br>
+      <br>
+      &emsp;&lt;/head&gt;<br>
+      <br>
+      &emsp;&lt;body&gt;<br>
+      &emsp;&lt;/body&gt;<br>
+      &lt;/html&gt;
+    </h4>
+    
+    <h3>Dans Vsual Studio Code tapez ! puis Entrée pour faire apparaitre le boilerplate automatiquement<br>
+    NB: cela ne fonctionne qu'avec les fichiers HTML
+    </h3>
+    <hr>
+    
+    <h2>Formulaires</h2>
+    <h3>
+        &lt;form action=""&gt;<br>
+        &emsp;&lt;label for=""&gt;Your name : &lt;/label&gt;<br>
+        &emsp;&lt;input type="text" name="yourName"&gt; &emsp;&emsp;&lt;!-- input --&gt;<br> 
+        &emsp;&lt;input type="submit"&gt; &emsp;&emsp;&lt;!-- submit button --&gt;<br>
+        &lt;/form&gt;<br>
+        <br>
+        <form action="">
+            <label for="">Your name : </label>
+            <input type="text"> 
+            <input type="submit"> 
+        </form>
+        <br>
+        NB : il y a plein de types d'input différents. Voir le détail de l'attribut 'type' dans le mdn :
+      <ol>
+        <li>Sélecteur de Date</li>
+        <li>Sélecteur de Couleur</li>
+        <li>Sélecteur de fichier</li>
+        <li>etc</li>
+      </ol>
+    </h3>
+    <hr>
+ 
+</body>
+</html>
