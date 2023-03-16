@@ -16,7 +16,7 @@
     <p>&lt;body style="background-color: #FEFCF3;"&gt;</body></p>
     <hr>
 
-    <h2>Internal CSS</h2>
+    <h2>Internal CSS pour un fichier HTML</h2>
     <p>
         Se positionne dans le head du code HTML<br><br>
         &lt;head&gt;<br>
@@ -30,6 +30,29 @@
     <p>NB: il existe un Browser Default CSS appliqué sur les éléments HTML<br>
        Il suffit de le taper dans google pour obtenir du détail à partir du premier lien <br>
        Cela aide à comprendre les effets inatendus suite à l'application du CSS <br> 
+    </p>
+    <p>Le plugin pesticide pour chrome permet d'afficher les zones des éléments HTML d'une page</p>
+
+    <h2>External CSS pour plusieurs fichiers</h2>
+    <p>Il faut créer un fichier .css comme par exemple styles.css<br>NB: On le place généralement dans un sous-répertoire /css</p>
+    <p>On place le code CSS dans le fichier. Exemple : <br><br>
+        body {<br>
+        &emsp;background-color: #FEFCF3;<br>
+        }<br>
+        <br>
+        hr {<br>
+        &emsp;border-color: #DFD3C3;<br>
+        &emsp;border-style: none;<br>
+        &emsp;border-top-style: dotted;<br>
+        &emsp;border-width: 5px;<br>
+        &emsp;width: 3%;<br>
+        }<br>
+        <br>
+    </p>
+    <p>Puis dans les fichiers concernés on place dans le head un éléments HTML link : <br><br> 
+        &lt;head&gt;
+        &emsp;&lt;link rel="stylesheet" href="css/styles.css"&gt;        
+        &lt;/head&gt;
     </p>
 </body>
 </html>
