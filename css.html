@@ -91,14 +91,65 @@
          
 
     </p>
+    <hr>
+
     <h2>Class attribute of HTML</h2>
     <p>
-        l'attribut "class" permet de cibler les effets du CSS <br>
+        l'attribut "class" permet de cibler les effets du CSS sur un ensemble d'éléments HTML dans une page <br>
         &lt;img class="bacon" src="https://em-content.zobj.net/thumbs/120/apple/325/bacon_1f953.png" alt="bacon-img"&gt; <br>
         <br>
         Selector = .NomDeLaClasse <br>
         .bacon { background-color: green; } <br>
+        <br>
+        On peut indiquer plusieurs classes sur un même élément HTML <br>
+        &lt;img class="broccoli circular" src="https://em-content.zobj.net/thumbs/120/apple/325/broccoli_1f966.png" alt="broccoli-img"&gt; <br>
+        <br>
+        <h3>Code CSS correspondant</h3>
+        .broccoli { <br>
+        &emsp;background-color: red; <br>
+        }<br>
+        <br>
+        .circular { <br>
+        &emsp;border-radius: 100%; <br>
+        }<br>
     <p>
+    <hr>
 
+    <h2>id attribute of HTML</h2>
+    <p>
+        l'attribut "id" permet de cibler les effets du CSS sur un unique élément HTML dans une page<br>
+        &lt;h1 id="heading"&gt;I Love Bacon&lt;/h1&gt; <br>
+        <br>
+        Selector = #NomID <br>
+        #heading { color: green; } <br>
+    <p>
+    <p>
+        NB: C'est le style le plus précis qui l'emporte en cas de conflit <br>
+        <ol>
+            <li>id</li>
+            <li>class</li>
+            <li>élément</li>
+            <li>default css</li>
+        </ol>
+    </p>
+    <hr>
+
+    <h2>Pseudo-classe</h2>
+    <p>
+        Permet de gérer le style CSS selon les différents états d'un élément HTML <br>
+        NB: On peut les retrouver <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference">ici</a>
+        <ul>
+            <li>survol</li>
+            <li>inactif</li>
+            <li>actif</li>
+            <li>etc</li>
+        </ul>
+        <br>
+        Changement de couleur au survol de l'image <br>
+        img:hover { <br>
+        &emsp;background-color: gold; <br>
+        } <br>
+
+    </p>
 </body>
 </html>
