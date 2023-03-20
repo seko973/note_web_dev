@@ -235,5 +235,106 @@
     </p>
     <hr>
 
+    <h2>CSS Positionning</h2>
+    <p>
+         La propriété "position" peut prendre 4 valeurs : <br>
+         <ul>
+            <li>static</li>
+            <li>relative</li>
+            <li>absolute</li>
+            <li>fixed</li>
+         </ul>
+         static: est le positionnement par défaut de tous les éléments HTML <br><br>
+         relative : déplace l'élément relativement par rapport à sa position statique <br>
+         img { <br>
+         &emsp;position: relative; <br>
+         &emsp;left: 30px; <br>
+         } <br>
+         L'image se déplace de 30px par rapport à son bord gauche. Il s'agit donc d'un déplacement vers la droite<br>
+         NB: un déplacement relatif n'affecte pas le positionnement des autres éléments. <br> 
+         tout se passe comme si l'élément occupait sa place statique <br><br>
+         absolute : déplace l'élément relativement par rapport à son parent 
+
+         div {  <br>
+            &emsp;position: relative; <br>
+         } <br>
+         img { <br>
+            &emsp;position: absolute; <br>
+            &emsp;left: 30px; <br>
+            } <br>
+        L'image se déplace de 30px par rapport au bord droit de son conteneur. Le conteneur doit avoir une position relative <br>
+        Si la position relative n'est pas précisée, alors le parent relatif devient le body. <br>
+        NB: une position absolute sort l'élément du flow HTML. une position absolute est une position relative au parent <br><br>
+        fixed : fixe l'élément par rapport à l'écran indépendamment du scroll.  
+    </p>
+    <hr>
+    <h2>Centering elment with CSS</h2>
+    <p>
+       text-align: center;  <br>
+       suffit généralement <br>
+       Mais text-align ne donne pas le résultat attendu sur un élément de type block réduit (de 30% par exemple) <br>
+       Dans ce cas, il faut utiliser : <br> 
+       margin: 0 auto 0 auto; <br>
+       sur l'élément de type block réduit <br>
+
+    </p>
+    <hr>
+    <h2>Font styling</h2>
+    <p>
+        Il existe 2 types de polices de base :
+        <ul>
+            <li>Serif</li>
+            <li>Sans-Serif</li>
+        </ul>
+        NB: Serif = empattement = lettre avec des terminaisons en forme de pied <br>
+        <br>
+        font-family: verdana, sans-serif; <br>
+        Si on veut se donner le maximum de chance d'afficher la police souhaitée il faut utiliser les <a href="https://www.cssfontstack.com/">web safe font</a> <br>
+        En effet, il se peut que certains navigateur ou machine n'affiche pas la font attendue <br>
+        Ce site permet de copier le code CSS avec des secours <br>
+        Ex: font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; <br>
+        <br>
+        Si on veut forcer l'utilisation d'une font, on peut l'intégrer.
+        Le site <a href="https://fonts.google.com/">google fonts</a> permet de prendre les font qui nous interesse <br>
+        Il suffit ensuite de coller ceci dans le head du code HTML : <br>
+        &lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt; <br>
+        &lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt; <br>
+        &lt;link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&display=swap" rel="stylesheet"&gt; <br>
+        <br>
+        Et ceci dans le code CSS : <br>
+        font-family: 'Merriweather', serif; <br>
+        font-family: 'Sacramento', cursive; <br>
+        font-family: 'Montserrat', sans-serif; <br>
+        <br>
+        Il vaut mieux exprimer la font-size en valeur dynamique <br>
+        Ex: font-size: 562.5%; ou bien font-size: 5.625em; plutôt que font-size: 90px; <br>
+        Cela permet de ne pas figer la taille de la police quand on active certaines fonctionnalités des navigateurs <br>
+        NB: une font-size de 100% équivaut à 16px et équivaut à 1em<br>
+        body { <br>
+        &emsp;font-size: 2em; <br>
+        } <br>
+        h1 { <br>
+            &emsp;font-size: 5em; <br>
+            } <br>
+        NB: Attention! Dans ce cas de figure la taille du texte est démultiplié par 10 = 2 x 5 x 16px <br>
+        Idem pour les pourcentage <br>
+        Cela n'arrivera pas quand la taille est exprimée en pixel. La configuration la plus précise écrase le reste <br>
+        Pour éviter les surprises, il faut utiliser font-size: 5rem; avec r comme root <br>
+
+    </p>
+    <hr>
+    <h2>CSS Floating and clear</h2>
+    <p>
+        float: left; <br>
+        Détermine qu'un élément est dans une position flottante sur la gauche <br>
+        Les autres éléments vont s'organiser sur la droite et envelopper l'élément flottant <br><br>
+        clear: left; <br>
+        Annule une position décalé en raison d'un élément flottant. Clear s'appliquent aux éléments qu'on ne veut pas voir se décaler. <br>
+        clear: left; signifie annule le margin de gauche positionné à cause de l'élément flottant à gauche <br><br>
+        NB: le float est à utiliser avec prudence. Seulement quand on a pas le choix et qu'on veut enrouler du texte autour d'un autre élément <br>
+        
+
+    </p>
+
 </body>
 </html>
