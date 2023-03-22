@@ -10,10 +10,109 @@
     <h1>Bootstrap</h1>
     <h2>Bootstrap installation</h2>
     <p>
-        il suffit de placer dans le head du code HTML le Bootstrap CDN <br>
+        il suffit de placer dans le head du code HTML le Bootstrap CDN CSS et JS <br>
         On le trouve <a href="https://getbootstrap.com/docs/5.3/getting-started/download/">ici</a> <br>
+        NB: il faut le placer avant les autres liens CSS
+        <br>
+        NB: Utiliser le "Starter template" pour initialiser une nouvelle page <br>
+        On le trouve <a href="https://getbootstrap.com/docs/5.1/getting-started/introduction/">ici</a> ici <br>
+        Comme pour le "Boiler plate", on le place en tant que code HTML de base <br>
+        <br>
+        Par ailleurs, des modèles de départ plus aboutis sont fournis <a href="https://getbootstrap.com/docs/5.0/examples/">ici</a> <br>
+        <br>
+        Une autre méthode consiste à <a href="https://getbootstrap.com/docs/5.1/getting-started/download/">télécharger le code de bootstrap</a> pour l'intégrer au projet <br>
+        Il suffit ensuite de faire ceci dans le head : <br>
+        &lt;link href="css/bootstrap.min.css" rel="stylesheet"&gt;
+        NB: inconvénient de cette méthode, le navigateur ne joue plus sur le cache et load le fichier CSS à chaque fois <br>
         
     </p>
-    
+    <hr>
+    <h2>Wireframing</h2>
+    <p>
+        La première chose à faire pour créer un site est de <a href="https://www.awwwards.com/websites/">s'inspirer de l'existant</a> <br>
+        Le site <a href="https://ui-patterns.com/">ui-patterns</a> est également un bon point de départ <br>
+        <a href="https://dribbble.com/search/web-site">dribbble.com</a> <br>
+        <br>
+        La prochaine étape est le croquis <br>
+        Pour cela nous pouvons utiliser <a href="https://balsamiq.cloud">balsamiq.cloud</a> <br>
+        Touche "r" enfoncé + Souris pour créer une box <br>
+        Rechercher des éléments dans la zone de recherche en haut à droite <br>
+        Touche "y" enfoncé + Souris pour créer une écriture grifouillée <br>
+        Touche "t" enfoncé + Souris pour créer un paragraphe <br>
+    </p>
+    <hr>
+    <h2>Bootstrap Navigation bar</h2>
+    <p>
+        Pour utiliser un élément il faut regarder la documentation <br>
+        Comme par exemple celle de <a href="https://getbootstrap.com/docs/5.3/components/navbar/">navbar</a> <br>
+        Dans la section "Supported content" on voit le code. Et surtout les éléments et les classes qu'on peut utiliser <br>
+        NB : les couleurs de bases se retrouve <a href="https://getbootstrap.com/docs/5.3/components/buttons/">ici</a> <br>  
+        <ul>
+            <li>Primary (Bleu foncé)</li>
+            <li>Secondary (Gris)</li>
+            <li>Success (Vert)</li>
+            <li>Danger (Rouge)</li>
+            <li>Warning (Jaune)</li>
+            <li>Info (Bleu)</li>
+            <li>Light (Gris clair)</li>
+            <li>Dark (Noir)</li>
+            <li>Link (Lien)</li>
+        </ul>
+        Ex : class="navbar-primary" ou class="btn-danger" <br>
+        class="navbar-expand-lg" organise l'affichage verticale ou horizontale de l'élément selon la taille de l'écran<br>
+        class="bg-light" donne une couleur de background à l'élément <br>
+        <br>
+        <a href="https://getbootstrap.com/docs/5.3/utilities/spacing/">Les utilitaires de bootstrap</a> fournissent les moyens de modifier les choses <br>
+        class="ms-auto" signifie qu'on veut de la marge (m=margin) automatique (auto) au début (s=start) de l'objet <br>
+
+
+    </p>
+    <hr>
+    <h2>Bootstrap Grid layout system</h2>
+    <p>
+        <a href="https://getbootstrap.com/docs/4.3/layout/grid/">Grid system</a> <br>
+        Le principe : <br>
+        Chaque ligne comporte 12 items <br>
+        un div class="row" <br>
+        qui encadre des div class="col" <br>
+        div class="col-6" signifie qu'on occupe la moitié de l'écran <br><br> 
+        si on veut que le résultat soit responsive, on utilise lg, md, sm dans le nom des classes <br>
+
+        &lt;div class="row"&gt; <br>        
+        &emsp;&lt;div class="col-lg-3 col-md-4 col-sm-6"&gt; <br>
+        ... <br>
+        Cela signifie que dans une ligne chaque colone occupe jusqu'à 3 cases en mode desktop <br>
+        4 cases en mode tablette <br>
+        6 cases en mode smartphone <br>
+        <ul>
+            <li>lg = large</li>
+            <li>md = medium</li>
+            <li>sm = small</li>
+        </ul>
+    </p>
+    <hr>
+    <h2>Bootstrap Containers</h2>
+    <p>
+        Les conteneurs sont des éléments responsives <br>
+        ils centrent leur contenu et permettent d'ajouter du padding <br>
+        div class="container" <br>
+        le container possède un max-width qui varie selon le viewport <br>
+        <br>
+        div class="container-fluid" <br>
+        Le container-fluid occupe toute la largeur de l'écran <br>
+    </p>
+    <hr>
+    <h2>Bootstrap button & Font Awesome</h2>
+    <p>
+        Lire la documentation du <a href="https://getbootstrap.com/docs/5.3/components/buttons/">Bootstrap button</a> <br>
+        <br>
+        pour utiliser <a href="https://fontawesome.com/">fontawesome.com</a> <br>
+        il faut placer dans le head le <a href="https://fontawesome.com/kits/9150e7be5e/setup?welcome=yes">CDN de fontawesome.com</a> <br>
+        ensuite on recherche l'icone de notre choix <br>
+        Puis on copie le code de l'icone dans la zone d'un texte qui nous intéresse <br>
+        Ex: &lt;button type="button" class="btn btn-dark btn-lg"&gt;<span style="color:darkmagenta;">&lt;i class="fa-brands fa-apple"&gt;&lt;/i&gt;</span> Download&lt;/button&gt; 
+
+
+    </p>
 </body>
 </html>
