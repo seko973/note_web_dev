@@ -348,7 +348,44 @@
     <hr>
     <h2>CSS Media Query Breakpoint</h2>
     <p>
-        
+        Syntaxe : @media &lt;type&gt; &lt;features&gt; <br>
+        Une media query est une requête qui vérifie si quelque chose est vrai ou faux <br>
+        le type peut prendre différentes valeurs : <br>
+        <ul>
+            <li>print (pour l'impression)</li>
+            <li>speech (lecture pour les mals voyants)</li>
+            <li>screen (pour le taille de l'écran)</li>
+        </ul>
+        @media print { <br>
+        <br>
+        h1 { <br>
+        &emsp;color: red; <br>
+        } <br>
+        <br>
+        } <br>
+        Ce code n'affiche le texte H1 en rouge que sur impression de la page <br>
+        <br>
+        NB : Dans cet exemple la syntaxe n'a pas de features
+        <br><br>
+        Dans l'exemple suivant il y a un feature <br>
+        @media (max-width: 900px) { <br>
+        ... <br>
+        } <br>
+        <br>
+        NB: quand le type n'est pas renseigné le media s'applique à la taille du navigateur <br>
+        (max-width: 900px) signifie, si la taille de l'écran est &lt; à 900px alors on applique le CSS <br>
+        (min-width: 900px) signifie, si la taille de l'écran est &gt; à 900px alors on applique le CSS <br>
+        Donc max = &lt; et min = &gt; <br>
+        <br>
+        @media (min-width: 900px) and (max-width: 1000px) <br>
+        signifie &gt; 900px et &lt; 1000px <br>
+
+
+
+
+
+
+
     </p>
 
 </body>
