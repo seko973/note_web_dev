@@ -131,6 +131,13 @@
             <li>élément</li>
             <li>default css</li>
         </ol>
+        <br>
+        Une priorité à considérer : <br>
+        <ol>
+            <li>inline CSS</li>
+            <li>internal CSS</li>
+            <li>external CSS</li>
+        </ol>
     </p>
     <hr>
 
@@ -380,9 +387,31 @@
         @media (min-width: 900px) and (max-width: 1000px) <br>
         signifie &gt; 900px et &lt; 1000px <br>
 
-
-
-
+    </p>
+    <hr>
+    <h2>Combining Selectors</h2>
+    <p>
+        Multiple Selectors : <br>
+        h1, h2, h3, h4, h5, h6 { <br>
+            &emsp;font-family: 'Montserrat', sans-serif; <br>
+            &emsp;font-weight: bold; <br>
+        } <br>
+        <br>
+        Hierarchical Selectors : <br>
+        Selector1 Selector2 {<br>
+        <br>
+        }<br>
+        NB: Selector2 est un enfant de Selector1 <br>
+        On lit de droite à gauche = "Le Selector2 est l'enfant du/est dans le Selecteur1" <br>
+        <br>
+        Combined Selectors : <br>
+        Selector1.Selector2 {<br>
+            <br>
+            }<br>
+        ou Selector1#Selector2 {} <br>
+        On lit de gauche à droite = "Le Selector1 ET Selecteur2" <br>
+        Ex: div#mydiv signifie un élément div qui possède un id #mydiv <br>
+        <br>
 
 
 
