@@ -7,6 +7,43 @@
     <title>Express</title>
 </head>
 <body>
-    
+    <h1>Express</h1>
+
+    Express est un blibliotèque qui optimise le dev pour les sites Web <br>
+    <a href="https://expressjs.com/">https://expressjs.com/</a>
+
+    <h2>Installation du package</h2>
+    <p>
+        Comme pour les autre packages, il faut préparer le projet : <br>
+        npm init(cf. Node)<br>
+        Ensuite on installe le package Express <br>
+        npm install express <br>
+        
+    </p>
+
+    <h2>Construire un serveur Web qui écoute sur le port 3000</h2>
+    <p>
+        const express = require("express"); <br>
+        <br>
+        const app = express(); <br>
+        <br>
+        app.listen(3000, function(){ <br>
+        &emsp;console.log("Server Started on Port 3000") <br>
+        }); <br>
+        <br>
+    </p>
+    <hr>
+
+    <h2>Handling Requests and Responses: the GET Request</h2>
+    <p>
+        app.get("/", function(request, response){ <br>
+            &emsp;response.send("<h1>Hello World!</h1>"); <br>
+        });<br>
+        <br>
+        app.get prépare le serveur à répondre sur sollicitation de la racine du serveur web "/" (la page d'accueil) <br>
+        response.send() renvoie les données aux navigateur <br>
+        <br>
+        Ce code se place juste avant le listener <br>
+    </p>
 </body>
 </html>
