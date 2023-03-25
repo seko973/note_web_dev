@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+</head>
+<body>
+    <h1>jQuery</h1>
+    <p>
+        jQuery est une bibliotèque JS. C'est la plus populaire. <br>
+        Elle raccourcit considérablement le code <br>
+        $(); = document.querySelector(); = jQuery(); <br>
+        $("h1").css("color","red");
+    </p>
+
+    <h2>Incorporate jQuery to Websites</h2>
+    <p>
+        Utiliser le CDN le plus populaire (celui de google). On le trouve sur le site <a href="https://www.w3schools.com/jquery/jquery_get_started.asp">w3schools.com</a>  <br>
+        Le CDN se place de préférence juste avant le body pour des raisons d'optimisation de la performance <br>
+        <br>
+        Le code jQuery est généralement placé dans le fichier index.js du projet <br>
+        Attention à ne jamais placer le CDN de jQuery après ce fichier. Autrement on aura une erreur <br>
+        <br>
+        $(document).ready(function() { <br>
+            //jQuery code <br>        
+        }); <br>
+        Ce code signifie que l'on attend le chargement complet du fichier JS de jQuery avant d'exécuter le code <br>
+        NB: ce code est important si on place le CDN dans le head de la page <br>
+
+    </p>
+    <hr>
+
+    <h2>Minification to Reduce File Size</h2>
+    <p>
+        Il s'agit de retirer tous les espaces et retour à la ligne pour gagner des octets dans le fichier et reduire le temps de chargement <br>
+    </p>
+
+    <h2>Selecting Elements with jQ</h2>
+    <p>
+        $("h1"); contrairement à querySelector() le code jQuery va sélectionner tous les éléments correspondant <br>
+        NB: il n'y a pas d'array à considérer <br> 
+
+    </p>
+
+    <hr>
+    <h2>Manipulating Styles</h2>
+    <p>
+        $("h1").css("color","red"); applique la valeur à la propriété sélectionnée <br>
+        <br>
+        var color = $("h1").css("color"); to get the property value <br>
+        <br>
+        Selon le même principe que le JS, il faut privilégier les modifications de classe défini dans le CSS pour modifier le style à partir du jQuery <br>
+        $("h1").addClass("huge"); ou bien $("h1").addClass("huge margin-50"); pour plusieurs classes <br>
+        $("h1").removeClass("huge"); ou bien $("h1").removeClass("huge margin-50"); <br>
+        <br>
+        NB: $("h1").hasClass("huge"); renvoie true ou false <br>
+
+
+    </p>
+    <hr>
+
+    <h2>Manipulating Text</h2>
+    <p>
+        $("h1").text("My new text"); <br>
+        $("h1").html("&lt;em&gt;My new text&lt;/em&gt;");
+
+    </p>
+    <hr>
+
+    <h2>Manipulating Attributes</h2>
+    <p>
+        $("img").attr("src"); get attribute <br>
+        $("a").attr("href","https://kelou.fr"); set attribute<br>
+    </p>
+
+    <hr>
+    <h2>Adding Event Listener</h2>
+    <p>
+        
+    </p>
+
+</body>
+</html>
