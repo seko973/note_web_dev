@@ -16,6 +16,8 @@
         Et là, on peut trouver "Snippets". On peut y créer des fichiers JS de tests pour exécuter du code <br>
         <br>
         <a href="https://github.com/rwaldron/idiomatic.js/">https://github.com/rwaldron/idiomatic.js/</a> est un lien de référence important <br> 
+        <br>
+        var theAnswer = prompt("mon libellé pour la zone de saisie"); popup de saisie basique JS pour faire des tests. Renvoie le texte saisi. <br> 
     </p>
     <hr>
     <h2>Data types</h2>
@@ -28,5 +30,423 @@
         typeof(&lt;variable&gt;); retourne de Data Type <br>
 
     </p>
+    <hr>
+    <h2>Javascript variables</h2>
+    <p>
+        var myname = "Seko"; <br>
+
+    </p>
+    <hr>
+    <h2>Strings</h2>
+    <p>
+        <h3>Concatenation</h3>
+         "a"+"b" = "ab" <br>
+
+         <h3>Length</h3>
+         myVar.length; donne le nombre de caractère <br>
+
+         <h3>Slicing and Extracting Parts of a String</h3>
+         NB: Slice = Trancher <br>
+         var name = "Angela"; <br>
+         name.slice(0,1); <br> 0 est la première position incluse, 1 est la première position excluse <br>
+         Le résultat retourne "A" <br> 
+
+         <h3>Changing Casing in Text</h3>
+         myVar.toUpperCase(); <br>
+         myVar.toLowerCase(); <br>
+
+     </p>
+     <hr>
+     <h2>Basic Arithmetics</h2>
+     addition: + <br>
+     Soustraction: - <br>
+     Division: / <br>
+     Modulo: % <br>
+     Math.floor(1.6); renvoie l'arrondi inférieur. soit 1 <br>
+     Math.round(1.6); renvoie l'arrondi vers l'entier le plus proche. soit 2 <br>
+
+
+     
+     <h2>Increment and Decrement expression</h2>
+     x++ <br>
+     x-- <br>
+     x += 3 <br>
+     x -= 5 <br>
+     x /= 3 <br>
+     x *= 10 <br>
+     <br>
+     Attention :
+     var x = 3; <br>
+     y = x++; //ici on attribue la valeur 3 à y avant d'incrémenter x. donc y = 3 et pas 4 <br>
+
+     <h2>Functions</h2>
+     function funcName() { <br>
+    <br>
+     }<br>
+     <br>
+     funcName(); <br>
+
+    <h3>Parameters and Arguments</h3>
+    function funcName(parameter) { <br>
+        <br>
+    }<br>
+
+    <h3>Outputs and Return Values</h3>
+    function funcName(parameter) { <br>
+        &emsp;...<br>
+        &emsp;return myResult;
+    }<br>
+    <hr>
+
+    <h2>Random numbers</h2>
+    <p>
+        var n = Math.random(); //fourni un nombre entre 0 et 1 exclu <br>
+        Math.floor(n*6); //renvoie un nombre entre 0 et 5 <br>
+    </p>
+    <hr>
+
+    <h2>If Else conditions and Comparators</h2>
+    <p>
+        if (track === "clear") {goStraight();} <br>
+        else if (track === "right is clear") {turnRight(;)} <br>
+        else {turnLeft(;)} <br>
+        <br>
+        <ul>
+            <li>=== Is equal to</li>
+            <li>!== Is not equal to</li>
+            <li>&gt; Is greater than</li>
+            <li>&lt; Is lesser than</li>
+            <li>&gt;= Is greater or equal to</li>
+            <li>&lt;= Is lesser or equal to</li>
+
+        </ul>
+        <br>
+        === Vérifie la valeur et le data type donc 1 === "1" sera faux <br>
+        == Vérifie la valeur uniquement donc 1 == "1" sera vrai <br>
+        <br>
+        Pour combiner les conditions : <br>
+        <ul>
+            <li>&&&emsp;AND</li>
+            <li>||&emsp;OR</li>
+            <li>!&emsp;NOT</li>
+        </ul>
+
+    </p>
+    <hr>
+    <h2>Arrays</h2>
+    <p>
+        var guestList = []; <br>
+        var guestList = ["Joanne","Maly", "Seko"]; <br>
+        guestList[0] renvoie "Joanne" <br>
+        <br>
+        <h3>Vérifier l'existance d'un élément dans un array</h3>
+        guestList.includes("Naseeb"); renvoie faux<br>
+
+        <h3>Ajouter un élément</h3>
+        guestList.push("Naseeb"); <br>
+        NB: push ajoute l'élément à la fin du tableau <br>
+
+        <h3>Retirer un élément</h3>
+        guestList.pop(); retire le dernier élément du tableau <br>
+
+        <h3>Dimension</h3>
+        guestList.length; renvoie la taille du array <br>
+
+    </p>
+    <hr>
+
+    <h2>Loops</h2>
+    <p>
+        while (something is true) { <br>
+        &emsp;//Do something <br>
+        } <br>
+        <br>
+        for (var i=0; i&lt;5; i++) { <br>
+        &emsp;//Do something <br>  
+        }<br>
+
+    </p>
+
+    <h2>Adding JS to Websites</h2>
+    <p>
+        inline JS : <br>
+        &lt;body onload="alert('Hello')"&gt; <br>
+        Ce n'est pas recommandé <br>
+        <br>
+        internal JS : <br>
+        Dans le body du code HTML : <br>
+        &lt;script&gt; <br>
+        alert("Hello"); <br>
+        &lt;/script&gt; <br>
+        
+        <br>
+        external JS : <br>
+        &lt;script src="index.js" charset="utf-8"&gt;&lt;/script&gt; <br>
+        <br>
+        La position du code est importante <br>
+        il faut toujours se poser la question de l'existance préalables des éléments HTML avant l'exécution du code JS. <br>
+        Sinon on aura une erreur dans la console <br>
+        NB: Quand cela est possible, il est recommandé de placer le code de chargement JS le plus bas possible dans le code HTML <br>
+        Cela augmente les performance du site = temps de chargement plus rapide <br> 
+
+    </p>
+    <hr>
+    <h2>DOM: Document Object Model</h2>
+    <p>
+        il catalogue la page Web en objet individuels que l'on peut sélectionner et manipuler <br>
+        Quand un navigateur charge une page Web, il convertit le code HTML en DOM. <br> 
+        Il s'agit plus précisement d'une arborescence avec les objets au bout <br>
+        <br>
+        Les objets ont des : <br>
+        <ul>
+            <li>Propriétés</li>
+            <li>Méthodes</li>
+        </ul>
+        On utilise la "dot notation" pour utiliser les propriétés ou les méthodes <br>
+        <br>
+        Pour modifier ou lire une propriété : <br>
+        objet.propriete = 0; <br>
+        var myVar = objet.propriete; <br>
+        <br>
+        Pour appeler une méthode : <br>
+        objet.method();
+        <br>
+        Quelque propriétés liées aux objets du DOM <br>
+        <ul>
+            <li>innerHTML</li>
+            <li>style</li>
+            <li>firstChild</li>
+        </ul>
+        <br>
+        Quelques méthodes applicables aux objets du DOM <br>
+        <ul>
+            <li>click(); pour cliquer sur l'objet</li>
+            <li>appendChild(); pour ajouter un enfant à l'objet</li>
+            <li>setAttribute(); pour changer un attribut HTML comme le href par exemple</li>
+        </ul>
+
+        NB: il existe des plugins gratuit qui permettent de visualiser la structure DOM d'une page Web <br>
+        <br>        
+        Dans la console on peut taper : "document;" pour faire apparaitre l'objet document. <br> 
+        On déplier l'objet retourné <br>
+        <br>
+        document.firstElementChild; renvoie le premier enfant du document <br>
+        document.firstElementChild.firstElementChild; renvoie le premier enfant du premier enfant <br>
+        NB: il existe aussi lastElementChild <br>
+
+    </p>
+    <hr>
+    <h2>Selecting HTML Elements with JS</h2>
+    <p>
+        document.getElementsByTagName("li"); renvoie un array contenant tous les éléments &lt;li&gt; de la page <br>
+        NB: Elements est au pluriel. Ca renvoie donc un tableau <br>
+        <br>
+        document.getElementsByTagName("li")[2].style.color = "red"; change la couleur du troisième item en rouge <br>
+        <br>
+        document.getElementsByClassName("btn"); <br>
+        <br>
+        document.getElementById("title"); <br>
+        NB: Element est au singulier. Cette méthode ne revoit qu'un seul élément et non un tableau <br>
+        <br>
+        document.getElementById("title").innerHTML = "Good bye"; <br>
+        <br>
+        document.querySelector("something"); <br>
+        NB: Cette methode ne renvoit qu'un seul élément <br>
+        <br>
+        document.querySelector("#myId"); <br>
+        document.querySelector(".myClass"); <br>
+        <br>
+        On peut combiner les sélectors comme pour le CSS <br>
+        document.querySelector("#myId .myClass"); un élément ayant une classe ".myClass" contenu dans un élément ayant un id "#myId"<br> 
+        document.querySelector("li a"); un "a" contenu dans un "li"<br>
+        document.querySelector("li.item"); un "li" ayant une classe "item" <br>
+        <br>
+        NB: Si plusieurs éléments matchent la sélection, seul le premier élément est retourné <br>
+        Pour tout chopper, il faut utiliser : <br>
+        document.querySelectorAll("something"); <br>
+        <br>
+  
+    </p>
+    <hr>
+
+    <h2>Manipulating and Changing Styles of HTML Elements with JS</h2>
+    <p>
+        La propriété style des objets DOM permet d'attaquer les propriétés CSS <br>
+        document.querySelector("li a").style.color = "red"; change la couleur de l'élément ciblé <br>
+        <br>
+        Attention : Les propriétés CSS avec le dash "-" sont camelCased <br>
+        font-size devient fontSize <br>
+        document.querySelector("li a").style.fontSize = "2rem"; <br>
+        On peut retrouver toutes ces propriétés dans le <a href="https://www.w3schools.com/jsref/dom_obj_style.asp">DOM Style Object Documentation</a> 
+        <br>
+        Autre remarque les valeurs attachées sont toujours des strings, contrairement au codage CSS <br>
+        font-size: 2rem; en CSS <br>
+        fontSize = "2rem"; en JS <br>
+  
+    </p>
+    <hr>
+    <h2>Structure vs Style vs Behaviour</h2>
+    <p>
+        La bonne façon de modifier le style des éléments avec JS est de jouer sur des classes définies dans le CSS <br>
+        Pour cela on se sert de la propriété "classList" <br>
+        <br>
+        document.querySelector("li a").classList.add("invisible"); On ajoute une classe existante dans le CSS à l'élément <br>
+        document.querySelector("li a").classList.remove("invisible"); pour retirer la classe <br>
+        document.querySelector("li a").classList.toggle("invisible"); pour basculer du add au remove de la classe selon l'état <br>
+    </p>
+    <hr>
+    <h2>Text Manipulation ant the Text Content Property</h2>
+    <p>
+        Ex: &lt;h1 id="title"&gt;&lt;strong&gt;Hello&lt;/strong&gt;&lt;/h1&gt;
+        <br>
+        document.querySelector("#title").innerHTL; renvoie "&lt;strong&gt;Hello&lt;/strong&gt;" <br>
+        tandis que document.querySelector("#title").textContent; renvoie "Hello" <br>
+        De même, on peut appliquer du HTML de la façon suivante par ex : <br>
+        document.querySelector("#title").innerHTL = "&lt;em&gt;Hello&lt;/em&gt;"; et cela aura un effet sur le rendu <br>
+        NB: attention a toujours utiliser un string <br>
+
+    </p>
+    <hr>
+
+    <h2>Manipulating HTML Element Atributes</h2>
+    <p>
+        Rappel : Les attributs sont les mots clés qui s'ajoutent aux balises HTML <br>
+        <br>
+        document.querySelector("a").attributes; Renvoie un array de tous les attributs de l'éléments <br>
+        document.querySelector("a").getAttribute("href"); Renvoie la valeur de l'attribut <br>
+        document.querySelector("a").setAttribute("href","theNewValue"); Pour affecter une nouvelle valeur <br>
+
+    </p>
+    <hr>
+
+    <h2>Adding Event Listener to a Button</h2>
+    <p>
+        document.querySelector("button").addEventListener("click", handleClick); <br>
+        Appelle de la fonction "handleClick()" dés que l'event "click" se produit sur le premier élément de type "button" <br>
+        NB: il ne faut surtout pas mettre de paranthèse à la fonction. Passage de paramètre par adresse <br>
+        <br>
+        On peut aussi écrire le code avec une fonction anonyme : <br>
+        document.querySelector("button").addEventListener("click", function () { <br>
+            //Do something <br>
+        }); <br>
+        NB: On doit mettre le '});' à la fin de la fonction. <br>
+        <br>
+        Dans le code de la fonction passée en paramètre, le mot réservé "this" est l'objet DOM correspondant à l'élément concerné par le déclenchement de l'event <br>
+
+
+
+    </p>
+    <hr>
+
+    <h2>Higher Order Function and Passing Functions as Arguments</h2>
+    <p>
+        function add(num1, num2) { return num1 + num2; } <br>
+        function multiply(num1, num2) { return num1 * num2; } <br>
+        function calculator(num1, num2, operator) { return operator(num1, num2); } <br>
+        <br>
+        calculator(2,5,add); renvoie 7 <br>
+        calculator(2,5,multiply); renvoie 10 <br>
+        <br>
+        calculator est appele "Higher Order Function"
+    </p>
+    <hr>
+    <h2>A Deeper Understanding of Javascript Objects</h2>
+    <p>
+        Un objet est créé de la manière suivante : <br>
+        <br>
+        var bellBoy1 = { <br>
+        &emsp;name: "Timmy", <br>
+        &emsp;age: 19, <br>
+        &emsp;hasWorkPermit: true, <br>
+        &emsp;languages: ["French","English"] <br>
+        } <br>
+        <br>
+        bellBoy1.name; affiche le nom <br>
+        <br>
+        Fonction Constructeur : <br>
+        function BellBoy(name, age, hasWorkPermit, languages) {  <br>
+        &emsp;this.name = name;<br>
+        &emsp;this.age = age;<br>
+        &emsp;this.hasWorkPermit = hasWorkPermit;<br>
+        &emsp;this.languages = languages;<br>
+        }<br>
+        <br>
+        Initialisation d'un objet : <br>
+        var BellBoy3 = new BellBoy("John", 19, true, ["French", "English"]); <br>
+    </p>
+    <hr>
+
+    <h2>How to Use Statements in JS</h2>
+    <p>
+        switch(variable) { <br>
+        &emsp;case value:<br>
+            //something here<br>
+        &emsp;break;<br>
+        &emsp;default;<br>
+        }<br>
+        <br>
+    </p>
+    <hr>
+
+    <h2>Objects, Their Methods and the Dot Notation</h2>
+    <p>
+        var bellBoy1 = { <br>
+        &emsp;name: "Timmy", <br>
+        &emsp;age: 19, <br>
+        &emsp;hasWorkPermit: true, <br>
+        &emsp;languages: ["French","English"] <br>
+        &emsp;moveSuitCase: function () { <br>
+        &emsp;&emsp;alert("May I take your suitcase ?"); <br>
+        &emsp;&emsp;pickUpSuitcase(); <br>
+        &emsp;&emsp;move(); <br>
+        &emsp;} <br>
+        } <br>
+        <br>
+        bellBoy1.moveSuitCase(); <br>
+        NB: C'est la même notation dans un Constructeur d'objet <br>
+        <br> 
+
+    </p>
+    <hr>
+
+    <h2>Keyboard Event Listeners</h2>
+    <p>
+        document.addEventListener("keydown", function (event) { <br>
+        &emsp;//Do something <br>
+        }); <br>
+        <br>
+        NB: Cet event s'applique à toute la page, tout le "document" <br>
+        On passe en argument un event "object". Il différe selon le type d'event <br>
+        <br>
+        NB: Pour les "Keyboard events", "event.key" affiche la lettre enfoncée <br>
+
+
+    </p>
+    <hr>
+
+    <h2>Understanding Callbacks and How to Respond to Events</h2>
+    <p>
+        function myFunction(parameters,callback) { <br>
+        &emsp;//do something <br>
+        &emsp;callback(evt); <br>
+        } <br>
+        <br>
+        NB: à la fin de son traitement, "myFunc" appelle la fonction "callback" avec un argument "evt" <br>
+        C'est le principe de fonctionnement de "addEventListener" <br> 
+    </p>
+    <hr>
+
+    <h2>Adding Animation to Websites</h2>
+    <p>
+        function buttonAnimation(currentKey) { <br>
+        &emsp;document.querySelector("."+currentKey).classList.add("pressed"); <br>
+        &emsp;setTimeout(function() { <br>
+        &emsp;&emsp;document.querySelector("."+currentKey).classList.remove("pressed"); <br>
+        &emsp;},100); <br>
+        } <br>
+        <br>
+        La classe "pressed" est removed aprés 100ms <br>
+    </p>
+
 </body>
 </html>
