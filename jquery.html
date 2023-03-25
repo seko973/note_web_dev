@@ -51,7 +51,7 @@
         <br>
         var color = $("h1").css("color"); to get the property value <br>
         <br>
-        Selon le même principe que le JS, il faut privilégier les modifications de classe défini dans le CSS pour modifier le style à partir du jQuery <br>
+        Selon le même principe que le JS, il faut privilégier les modifications de classe (définie dans le CSS) pour modifier le style à partir du jQuery <br>
         $("h1").addClass("huge"); ou bien $("h1").addClass("huge margin-50"); pour plusieurs classes <br>
         $("h1").removeClass("huge"); ou bien $("h1").removeClass("huge margin-50"); <br>
         <br>
@@ -78,8 +78,78 @@
     <hr>
     <h2>Adding Event Listener</h2>
     <p>
-        
+        $("h1").click(function(){ <br>
+        &emsp;//do something <br>
+        }); <br>
+        <br>
+        On appelle la methode correspondant au listener et on passe en paramètre une callback function <br>
+        La liste complète des methodes se trouve ici : <a href="https://www.w3schools.com/jquery/jquery_ref_events.asp">https://www.w3schools.com/jquery/jquery_ref_events.asp</a> <br>
+        <br>
+        Une autre façon de faire et qui se rapproche de la notation JS : <br>
+        $("h1").on("click",function(){ <br>
+        &emsp;//do something <br>
+        }); <br>
+        <a href="https://www.w3schools.com/jsref/dom_obj_event.asp"> https://www.w3schools.com/jsref/dom_obj_event.asp</a> Documentation MDN sur les type d'event <br>
+        <br>
     </p>
+
+    <hr>
+    <h2>Add, Remove and Hide Elements with JS</h2>
+    <p>
+        Ajout d'un bouton avant le "h1" <br>
+        $("h1").before("&lt;button&gt;&lt;/button&gt;"); <br>
+        <br>
+        Ajout d'un bouton après le "h1" <br>
+        $("h1").after("&lt;button&gt;&lt;/button&gt;"); <br>
+        <br>
+        Ajout d'un bouton dans le "h1" avant le texte du "h1" <br>
+        $("h1").prepend("&lt;button&gt;&lt;/button&gt;"); <br>
+        NB: le bouton est entre "&lt;h1&gt; et &lt;/h1&gt;" <br>
+        <br>
+        Ajout d'un bouton dans le "h1" après le texte du "h1" <br>
+        $("h1").append("&lt;button&gt;&lt;/button&gt;"); <br>
+        NB: le bouton est entre "&lt;h1&gt; et &lt;/h1&gt;" <br>
+        <br>
+        Supprimer un élément :
+        $("button").remove(); supprime tous les boutons de la page <br>
+        <br>
+        Cacher un élément :
+        $("h1").hide(); l'élément disparait comme avec un position: none; en CSS <br>
+        $("h1").show(); pour le faire réapparaitre  <br>
+        $("h1").toggle(); pour basculer automatiquement de l'état hide vers show et inversement <br>
+        <br>
+
+    </p>
+    <hr>
+    <h2>Websites Animation with jQ</h2>
+    <p>
+        Animation pour cacher les éléments : <br>
+        <br>
+        $("h1").fadeOut(); Fait disparaitre l'élément avec un effet de fondu <br>
+        $("h1").fadeIn(); Fait apparaitre l'élément avec un effet de fondu <br>
+        $("h1").fadeToggle(); pour basculer automatiquement de l'état fadeOut vers fadeIn et inversement <br>
+        <br>
+        $("h1").slideUp(); Fait disparaitre l'élément avec un effet de glissement <br>
+        $("h1").slideDown(); Fait apparaitre l'élément avec un effet de glissement <br>
+        $("h1").slideToggle(); pour basculer automatiquement de l'état slideUp vers slideDown et inversement <br>
+        NB: slideToggle() est un effet utilisé pour les dropdown menu par exemple <br> 
+        <br>
+        Animation personnalisée :  <br>
+        <br>
+        $("h1").animate({opacity: 0.5}); change l'opacité en douceur <br>
+        $("h1").animate({margin: 100px}); ajoute de la marge en douceur <br>
+        NB: cette methode ne fonctionne qu'avec des propriétés qui attendent des valeurs numériques <br>
+        Ca ne fonctionne pas avec color ou backgroud-color par exemple <br>
+        <br>
+        Enchainer les animations : <br>
+        <br>
+        $("h1").slideUp().slideDown().animate({opacity: 0.5});
+        <br>
+        <a href="https://www.w3schools.com/jquery/jquery_ref_effects.asp">https://www.w3schools.com/jquery/jquery_ref_effects.asp</a> pour une liste complète des effets possibles <br>
+
+
+    </p>
+
 
 </body>
 </html>
