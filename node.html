@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node.js</title>
+</head>
+<body>
+    <h1>Node.js</h1>
+    Le language de Node est le JS <br>
+
+    <h2>Installation</h2>
+    <p>
+        Voir le tuto de Angela pour l'installtion. c'est simple <br>
+    </p>
+    <hr>
+
+    <h2>Utilisation de node</h2>
+    <p>
+        Node s'utilise avec l'hyper terminal <br>
+        Ex: Node index.js exécute le fichier index.js depuis l'hyper terminal <br>
+    </p>
+    <hr>
+
+    <h2>The Node REPL (Read Evaluation Print Loops)</h2>
+    <p>
+        si je tape simplement node dans l'hyper terminal <br>
+        alors on accède au REPL (prononcé RIPLE). Tout se passe alors comme si on était en mode console sur Chrome Dev Tools <br>
+        On a un prompt &gt; <br>
+        Et on peut taper des commandes JS à la volée <br>
+        <br>
+        Pour sortir du REPL : <br>
+        <ul>
+            <li>".exit" + ENTREE</li>
+            <li>CTRL + C 2 fois</li>
+        </ul>
+
+    </p>
+    <hr>
+
+    <h2>How to Use the Native Node Modules</h2>
+    <p>
+        La première chose à faire avant d'utiliser un module est de le réclamer <br>
+        const fs = require('node:fs/promises'); from <a href="https://nodejs.org/dist/latest-v18.x/docs/api/fs.html">Node file system docs</a> <br>
+        <br>
+        fs.copyFileSync("file1.txt", "file2.txt"); //copie un fichier <br>
+    </p>
+    <hr>
+
+    <h2>The NPM Package Manager and Installing External Node Modules</h2>
+    <p>
+        NPM = Node Package Manager <br>
+        <br>
+        depuis l'hyper terminal taper : npm init <br>
+        NB: à faire une fois pour le projet en cours <br>
+        <br>
+        Ensuite il faut rechercher son package sur <a href="https://www.npmjs.com/">https://www.npmjs.com/</a><br>
+        Puis il faut installer le package à partir de l'hyper terminal <br>
+        Ex: npm install superheroes <br>
+        <br>
+        Puis il faut écrire le code de réclamation et de traitement dans le fichier "index.js" <br>
+        var superheroes = require('superheroes'); <br>
+        var mySuperheroName = superheroes.random(); <br>
+        console.log(mySuperheroName); <br>
+        <br>
+
+
+    </p>
+</body>
+</html>
