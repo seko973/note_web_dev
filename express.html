@@ -36,14 +36,104 @@
 
     <h2>Handling Requests and Responses: the GET Request</h2>
     <p>
-        app.get("/", function(request, response){ <br>
-            &emsp;response.send("<h1>Hello World!</h1>"); <br>
+        app.get("/", function(req, res){ <br>
+            &emsp;res.send("<h1>Hello World!</h1>"); <br>
         });<br>
         <br>
         app.get prépare le serveur à répondre sur sollicitation de la racine du serveur web "/" (la page d'accueil) <br>
         response.send() renvoie les données aux navigateur <br>
         <br>
         Ce code se place juste avant le listener <br>
+    </p>
+    <hr>
+
+    <h2>Understanding and Working with Routes</h2>
+    <p>
+        route d'accueil : http://localhost:3000/ <br>
+        app.get("/", function(req, res){ <br>
+            &emsp;res.send("<h1>Hello World!</h1>"); <br>
+        });<br>
+        <br>
+        route 2 : http://localhost:3000/contact <br>
+        app.get("/contact", function(req, res){ <br>
+            &emsp;res.send("<p>Contact Me at seko@seko.com</p>"); <br>
+        });<br>
+        <br>
+        route 3 : http://localhost:3000/about<br>
+        app.get("/about", function(req, res){ <br>
+            &emsp;res.send("<p>I am Seko a developer from French Guiana</p>"); <br>
+        });<br>
+        <br>        
+    </p>
+    <hr>
+
+    <h2>Nodemon</h2>
+    <p>
+        C'est un package qui monitore les changements dans le code <br>
+        il redémarre "node server.js" automatiquement plutot que de le faire manuellement à chaque fois <br>
+        <br>
+        npm install -g nodemon Pour l'installer <br>    
+        Maintenant au lieu de taper "node server.js" on tape "nodemon server.js" <br>
+    </p>
+    <hr>
+
+    <h2>Responding to Requests with HTML Files</h2>
+    <p>
+        Pour envoyer un fichier HTML : <br>
+        <br>
+        res.sendFile(__dirname + "/index.html"); <br>
+        <br>
+        "__dirname" donne le répertoire courant du fichier exécuté <br>
+
+    </p>
+    <hr>
+
+    <h2></h2>
+    <p>
+        &lt;form action="/" method="post"&gt; <br>
+        &emsp;&lt;input type="text" name="num1" placeholder="First Number"&gt;
+        &emsp;&lt;input type="text" name="num2" placeholder="Second Number"&gt;
+        &emsp;&lt;button type="submit" name="submit"&gt;Calculate&lt;/button&gt;
+        &lt;form&gt; <br>  
+        <br>
+        L'attribut "method" définit la méthode appliquée aux données. "method=post" signifie qu'on les envoie <br>  
+        L'attribut "action" indique vers quoi on envoit les données. "/" signifie vers le serveur <br>
+        <br>
+        &lt;form method="post"&gt; sous cette forme action="/" est implicite <br>
+        <br>
+        Pour gérer les POST au niveau du serveur, il faut utiliser app.post() <br>
+        <br>
+        app.post("/", function(req, res){ <br>
+            &emsp;res.send("Thx for posting"); <br>
+        });<br>  
+        <br>
+        Pour exploiter les données postées par le navigateur, il faut utiliser un nouveau package dans Node <br>
+        npm install body-parser <br>
+        <br>
+        Ensuite, ajouter dans le code du serveur <br>
+        const bodyParser = require("body-parser"); <br>
+        const app = express(); <br>
+        app.use(bodyParser.urlencoded({extended: true})); <br>
+        NB: Cette option doit être appliquée pour accéder au objet imbriqué <br>
+        <br>
+        Aprés ces déclaration, on peut appeler le code suivant dans le code de gestion du POST <br>
+        app.post("/", function(req, res){ <br>
+            <br>
+            &emsp;//Le bodyParser parse le body et avec la méthode urlencoded({extended: true}) <br>
+            &emsp;//on a accès aux données transmises par les formulaire à travers req.body.num1 et req.body.num1 <br>
+            &emsp;//Attention num1 et num2 correspondent aux attributs name des input <br>
+            <br>
+            &emsp;var num1 = req.body.num1;
+            &emsp;var num2 = req.body.num2;
+        
+            &emsp;var result = num1 + num2;
+        
+            &emsp;res.send("The result is " + result);    
+            <br>
+            &emsp;res.send("Thx for posting"); <br>
+        });<br>  
+
+
     </p>
 </body>
 </html>
